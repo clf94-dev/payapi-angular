@@ -20,6 +20,7 @@ import { PricingComponent } from './components/pages/pricing/pricing.component';
 import { ContactComponent } from './components/pages/contact/contact.component';
 import { AboutComponent } from './components/pages/about/about.component';
 import { appRoutingProviders, routing } from './app.routing';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { appRoutingProviders, routing } from './app.routing';
     AboutComponent
   ],
   imports: [
-    BrowserModule,routing
+    BrowserModule,routing, 
+    FlexLayoutModule
   ],
   providers: [appRoutingProviders],
   bootstrap: [AppComponent]
