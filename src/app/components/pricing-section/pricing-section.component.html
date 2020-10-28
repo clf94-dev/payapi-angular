@@ -1,1 +1,58 @@
-<p>pricing-section works!</p>
+<div class="pricing-section">
+    <div class='top-pricing'>
+        <h1>Pricing</h1>
+    </div>
+    <div class="pricing-row" fxLayout="row wrap">
+        <div class="pricing-col" fxFlex.xs="100%" fxFlex.sm="33%" fxFlex.md="33%" fxFlex.lg="33%" *ngFor="let info of pricingdata; let i=index">
+            <h3>{{info.title}}</h3>
+            <p>{{info.text}}</p>
+            <h1>{{info.price}}</h1>
+            <hr>
+
+            <div class="feature-row" fxLayout="row wrap">
+                <div class="tick-col"fxFlex.xs="25%" fxFlex.sm="25%" fxFlex.md="25%" fxFlex.lg="25%"><i [ngClass]="info.transTick && 'fas fa-check'"></i></div>
+                <div class="text-col"fxFlex.xs="75%" fxFlex.sm="75%" fxFlex.md="75%" fxFlex.lg="75%">
+                    <h4 [ngStyle]="{'color' : info.transTick && 'rgb(108, 130, 148)'}">Transactions</h4>
+                </div>
+            </div>
+            <div class="feature-row" fxLayout="row wrap">
+                <div class="tick-col"fxFlex.xs="25%" fxFlex.sm="25%" fxFlex.md="25%" fxFlex.lg="25%"><i [ngClass]="info.authTick && 'fas fa-check'"></i></div>
+                <div class="text-col"fxFlex.xs="75%" fxFlex.sm="75%" fxFlex.md="75%" fxFlex.lg="75%">
+                    <h4 [ngStyle]="{'color' : info.authTick && 'rgb(108, 130, 148)' }">Auth</h4>
+                </div>
+            </div>
+            <div class="feature-row" fxLayout="row wrap">
+                <div class="tick-col"fxFlex.xs="25%" fxFlex.sm="25%" fxFlex.md="25%" fxFlex.lg="25%"><i [ngClass]="info.identTick && 'fas fa-check'"></i></div>
+                <div class="text-col"fxFlex.xs="75%" fxFlex.sm="75%" fxFlex.md="75%" fxFlex.lg="75%">
+                    <h4 [ngStyle]="{'color' : info.identTick && 'rgb(108, 130, 148)' }">Identity</h4>
+                </div>
+            </div>
+            <div class="feature-row" fxLayout="row wrap">
+                <div class="tick-col"fxFlex.xs="25%" fxFlex.sm="25%" fxFlex.md="25%" fxFlex.lg="25%"><i [ngClass]="info.investTick && 'fas fa-check'"></i></div>
+                <div class="text-col"fxFlex.xs="75%" fxFlex.sm="75%" fxFlex.md="75%" fxFlex.lg="75%">
+                    <h4 [ngStyle]="{'color' : info.investTick && 'rgb(108, 130, 148)' }">Investments</h4>
+                </div>
+            </div>
+            <div class="feature-row" fxLayout="row wrap">
+                <div class="tick-col"fxFlex.xs="25%" fxFlex.sm="25%" fxFlex.md="25%" fxFlex.lg="25%"><i [ngClass]="info.assetsTick && 'fas fa-check'"></i></div>
+                <div class="text-col"fxFlex.xs="75%" fxFlex.sm="75%" fxFlex.md="75%" fxFlex.lg="75%">
+                    <h4 [ngStyle]="{'color' : info.assetsTick &&  'rgb(108, 130, 148)'}">Assets</h4>
+                </div>
+            </div>
+            <div class="feature-row" fxLayout="row wrap">
+                <div class="tick-col"fxFlex.xs="25%" fxFlex.sm="25%" fxFlex.md="25%" fxFlex.lg="25%"><i [ngClass]="info.liabilitTick && 'fas fa-check'"></i></div>
+                <div class="text-col"fxFlex.xs="75%" fxFlex.sm="75%" fxFlex.md="75%" fxFlex.lg="75%">
+                    <h4 [ngStyle]="{'color' : info.liabilitTick && 'rgb(108, 130, 148)' }">Liabilities</h4>
+                </div>
+            </div>
+            <div class="feature-row" fxLayout="row wrap">
+                <div class="tick-col"fxFlex.xs="25%" fxFlex.sm="25%" fxFlex.md="25%" fxFlex.lg="25%"><i [ngClass]="info.incoTick && 'fas fa-check'"></i></div>
+                <div class="text-col"fxFlex.xs="75%" fxFlex.sm="75%" fxFlex.md="75%" fxFlex.lg="75%">
+                    <h4 [ngStyle]="{'color' : info.incoTick && 'rgb(108, 130, 148)' }">Income</h4>
+                </div>
+            </div>
+            <hr/>
+            <button class='dark-btn'>Request Access</button>
+        </div>
+    </div>
+</div>

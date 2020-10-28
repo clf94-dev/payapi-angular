@@ -1,0 +1,137 @@
+$dark-red: rgb(186, 66, 112);
+$link-water-white: rgb(251, 252, 254);
+$san-juan-blue: rgb(54, 83, 107);
+$mirage-blue: rgb(27, 38, 47);
+$charm-pink: rgb(218, 109, 151);
+$light-san-juan-blue: rgb(108, 130, 148);
+//---------------font sizes-----------
+$h1-big: 72px;
+$h1-small: 56px;
+$h2-size: 48px;
+$h3-big: 32px;
+$h3-small: 20px;
+$h4-size: 25px;
+//--------------font families-----------
+$DM-serif: 'DM Serif Display',
+serif;
+$public-sans: 'Public Sans',
+sans-serif;
+//--------------font weights-------------
+$regular: 400;
+$light: 300;
+.pricing-section {
+    .top-pricing {
+        @media screen and (min-width: 1080px) {
+            padding: 5% 10%;
+        }
+        padding: 5% 7%;
+        h1 {
+            font-size: $h1-small;
+            font-family: $public-sans;
+            font-weight: $light;
+            color: $mirage-blue;
+            @media screen and (min-width: 1080px) {
+                padding-right: 25%;
+            }
+            @media screen and (max-width: 1080px) {
+                text-align: center;
+                font-size: 35px;
+            }
+        }
+    }
+    .pricing-row {
+        @media screen and (min-width: 755px) {
+            padding: 2% 10%;
+        }
+        padding: 5% 10%;
+        .pricing-col {
+            @media screen and (min-width: 480px) {
+                width: 33%;
+              }
+              width: 100%;
+            @media screen and (max-width: 755px) {
+                padding-top: 5%;
+            }
+            @media screen and (max-width: 1080px) {
+                text-align: center;
+                justify-content: center;
+            }
+            h1 {
+                @media screen and (min-width: 756px) {
+                    font-size: 50px;
+                }
+                font-size:40px;
+                font-weight: $light;
+                color: $san-juan-blue;
+                font-family: $public-sans;
+                margin-bottom: 20px;
+            }
+            h3 {
+                font-size: $h3-small;
+                color: $dark-red;
+                font-weight: $light;
+                letter-spacing: -0.05rem;
+                font-family: $public-sans;
+                margin-bottom: 15px;
+            }
+            p {
+                @media screen and (max-width: 1080px) {
+                    padding: 0 7%;
+                }
+                padding-right: 25%;
+                font-size: 15px;
+                font-weight: $light;
+                line-height: 1.5rem;
+                font-family: $public-sans;
+                color: $light-san-juan-blue;
+                margin-bottom: 25px;
+            }
+            hr {
+                @media screen and (max-width: 1080px) {
+                    justify-self: center;
+                }
+                color: lightgray;
+                @media screen and (max-width: 756px) {
+                    width: 100%;
+                }
+                width: 90%;
+                margin: 25px 0;
+            }
+            .feature-row {
+                align-items: center;
+                text-align: center;
+              .text-col { 
+                    width: 75%;
+                 
+                  h4 {
+                    text-align: start;
+                    font-size: 16px;
+                    color: $san-juan-blue;
+                    font-family: $public-sans;
+                    font-weight: $light;
+                    margin: 15px 0;
+                }}
+            .tick-col {  width:25%;
+
+                 i {
+                    color: $dark-red;
+                }}
+            }
+            .dark-btn {
+                height: 50px;
+                width: 150px;
+                border-radius: 25px;
+                margin-bottom: 30px;
+                cursor: pointer;
+                border: 1px solid $mirage-blue;
+                background-color: transparent;
+                color: $mirage-blue;
+                &:hover {
+                    transition: all 0.2s ease-out;
+                    background-color: $mirage-blue;
+                    color: $link-water-white;
+                }
+            }
+        }
+    }
+}
