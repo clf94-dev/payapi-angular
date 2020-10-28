@@ -19,6 +19,7 @@ import { HomeComponent } from './components/pages/home/home.component';
 import { PricingComponent } from './components/pages/pricing/pricing.component';
 import { ContactComponent } from './components/pages/contact/contact.component';
 import { AboutComponent } from './components/pages/about/about.component';
+import { appRoutingProviders, routing } from './app.routing';
 
 @NgModule({
   declarations: [
@@ -42,9 +43,9 @@ import { AboutComponent } from './components/pages/about/about.component';
     AboutComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,routing
   ],
-  providers: [],
+  providers: [appRoutingProviders],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
