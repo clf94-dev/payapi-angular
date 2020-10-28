@@ -1,0 +1,58 @@
+$dark-red: rgb(186, 66, 112);
+$link-water-white: rgb(251, 252, 254);
+$san-juan-blue: rgb(54, 83, 107);
+$mirage-blue: rgb(27, 38, 47);
+$charm-pink: rgb(218, 109, 151);
+$light-san-juan-blue: rgb(108, 130, 148);
+//---------------font sizes-----------
+$h1-big: 72px;
+$h1-small: 56px;
+$h2-size: 48px;
+$h3-big: 32px;
+$h3-small: 20px;
+$h4-size: 25px;
+//--------------font families-----------
+$DM-serif: 'DM Serif Display',
+serif;
+$public-sans: 'Public Sans',
+sans-serif;
+//--------------font weights-------------
+$regular: 400;
+$light: 300;
+//-------------------Principles component------------
+.principles-section {
+    @media screen and (min-width: 755px) {
+        padding: 2% 7% 1%;
+    }
+    @media screen and (min-width: 1080px) {
+        padding: 2% 17% 1%;
+    }
+    padding: 2% 5% 1%;
+    @media screen and (max-width:756px) {
+        text-align: center;
+    }
+ .title-col  {     @media screen and (min-width: 480px) {
+    width: 50%;
+  }
+  width: 100%;
+     h4 {
+        margin-top: 10px;
+        font-size: $h4-size;
+        font-family: $public-sans;
+        color: $mirage-blue;
+        font-weight: $light;
+    }}
+    .text-col{
+        @media screen and (min-width: 480px) {
+            width: 50%;
+          }
+          width: 100%;
+        p {
+        font-size: 15px;
+        font-weight: $light;
+        line-height: 1.5rem;
+        font-family: $public-sans;
+        color: $light-san-juan-blue;
+        margin-bottom: 45px;
+    }}
+}
