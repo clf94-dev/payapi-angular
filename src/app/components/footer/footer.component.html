@@ -1,1 +1,18 @@
-<p>footer works!</p>
+<div class="footer-section" fxLayout="row wrap">
+    <div class="footer-col" fxFlex.xs="100%" fxFlex.sm="100%" fxFlex.md="17%" fxFlex.lg="17%">
+        <img src="{{logo}}" alt="payapi" (click)="goToHome()">
+    </div>
+
+    <div class="footer-col" fxFlex.xs="100%" fxFlex.sm="100%" fxFlex.md="16.5%" fxFlex.lg="16.5%"><a (click)="goToPricing()">Pricing</a></div>
+    <div class="footer-col" fxFlex.xs="100%" fxFlex.sm="100%" fxFlex.md="16.5%" fxFlex.lg="16.5%"><a (click)="goToAbout()">About</a></div>
+    <div class="footer-col" fxFlex.xs="100%" fxFlex.sm="100%" fxFlex.md="16.5%" fxFlex.lg="16.5%"><a (click)="goToContact()">Contact</a></div>
+    <div class="footer-col" fxFlex.xs="100%" fxFlex.sm="100%" fxFlex.md="16.5%" fxFlex.lg="16.5%"></div>
+    <div class="footer-col" fxFlex.xs="100%" fxFlex.sm="100%" fxFlex.md="16.5%" fxFlex.lg="16.5%">
+        <div class="social-row">
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-instagram"></i>
+        </div>
+    </div>
+
+</div>
