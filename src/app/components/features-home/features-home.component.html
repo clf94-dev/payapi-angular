@@ -1,1 +1,14 @@
-<p>features-home works!</p>
+<div class="featuresHome-section" fxLayout="row wrap">
+
+    <div class="feat-card" fxFlex.xs="100%" fxFlex.sm="33%" fxFlex.md="33%" fxFlex.lg="33%" *ngFor='let feat of featuresdata; let i=index'>
+        <img src="{{feat.src}}" alt="{{feat.imgAlt}}">
+        <h3>{{feat.title}}</h3>
+        <p>{{feat.text}}</p>
+
+
+
+
+    </div>
+
+
+</div>

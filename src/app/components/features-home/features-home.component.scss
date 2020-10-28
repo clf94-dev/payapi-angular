@@ -1,0 +1,51 @@
+$dark-red: rgb(186, 66, 112);
+$link-water-white: rgb(251, 252, 254);
+$san-juan-blue: rgb(54, 83, 107);
+$mirage-blue: rgb(27, 38, 47);
+$charm-pink: rgb(218, 109, 151);
+$light-san-juan-blue: rgb(108, 130, 148);
+//---------------font sizes-----------
+$h1-big: 72px;
+$h1-small: 56px;
+$h2-size: 48px;
+$h3-big: 32px;
+$h3-small: 20px;
+$h4-size: 25px;
+//--------------font families-----------
+$DM-serif: 'DM Serif Display',
+serif;
+$public-sans: 'Public Sans',
+sans-serif;
+//--------------font weights-------------
+$regular: 400;
+$light: 300;
+//----------------FeaturesHome component ----------------------
+.featuresHome-section {
+    padding: 5% 10%;
+    .feat-card {
+        @media screen and (min-width: 480px) {
+            width: 33%;
+          }
+          width: 100%;
+        text-align: center;
+        img {
+            width: 130px;
+            margin-bottom: 30px;
+        }
+        h3 {
+            font-size: $h3-small;
+            font-family: $public-sans;
+            font-weight: $light;
+            margin-bottom: 15px;
+        }
+        p {
+            padding: 0 7%;
+            font-size: 15px;
+            font-weight: $light;
+            line-height: 1.5rem;
+            font-family: $public-sans;
+            color: $light-san-juan-blue;
+            margin-bottom: 45px;
+        }
+    }
+}
