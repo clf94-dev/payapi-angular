@@ -1,1 +1,16 @@
-<p>statistics-about works!</p>
+<div class="statistics-section">
+    <img src="{{study}}" alt=" Team members">
+    <div class="statistics-row" fxLayout="row wrap">
+        <hr class='block-div' />
+        <div class="statistics-col" *ngFor="let static of statisticsdata" fxFlex.xs="100%" fxFlex.sm="100%" fxFlex.md="33%" fxFlex.lg="33%">
+
+            <hr class="card-hr" />
+            <h3>{{static.title}}</h3>
+            <h1>{{static.text}}</h1>
+            <hr class="card-hr" />
+
+        </div>
+        <hr class='block-div' />
+    </div>
+
+</div>
