@@ -7,11 +7,11 @@
     fxFlex.lg="50%"
   >
     <form class="form-col" fxLayout="column" #userform="ngForm" (ngSubmit)="onSubmit()">
-      <input required pattern="[a-zA-Z]+"#name="ngModel" [(ngModel)]="user.name" [ngStyle]="{borderBottomColor: !name.valid && name.touched? 'red': 'black'}"  type="text" name="name" placeholder="Name" />
+      <input required pattern="[a-zA-Z]+"#name="ngModel" [(ngModel)]="user.name" [ngStyle]="{borderBottomColor: !name.valid && name.touched|| submitClicked && name.untouched? 'red': 'black'}"  type="text" name="name" placeholder="Name" />
       <small *ngIf="!name.valid && name.touched || submitClicked && name.untouched" style="color: 'red'">
         Name not valid
       </small>
-      <input required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" #email="ngModel" [(ngModel)]="user.email" [ngStyle]="{borderBottomColor: !email.valid && email.touched? 'red': 'black'}" type="email" name="email" id="" placeholder="Email Address" />
+      <input required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" #email="ngModel" [(ngModel)]="user.email" [ngStyle]="{borderBottomColor: !email.valid && email.touched || submitClicked && email.untouched? 'red': 'black'}" type="email" name="email" id="" placeholder="Email Address" />
       <small *ngIf="!email.valid && email.touched || submitClicked && email.untouched"  style="color: 'red'">
         Email address not valid
       </small>
@@ -25,7 +25,7 @@
         cols="30"
         rows="10"
         placeholder="Message"
-        [ngStyle]="{borderBottomColor: !message.valid && message.touched? 'red': 'black'}"
+        [ngStyle]="{borderBottomColor: !message.valid && message.touched|| submitClicked && message.untouched? 'red': 'black'}"
       ></textarea>
       <small *ngIf="!message.valid && message.touched|| submitClicked && message.untouched" style="color: 'red'">
         Message can't be empty
