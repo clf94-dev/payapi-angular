@@ -1,0 +1,119 @@
+$dark-red: rgb(186, 66, 112);
+$link-water-white: rgb(251, 252, 254);
+$san-juan-blue: rgb(54, 83, 107);
+$mirage-blue: rgb(27, 38, 47);
+$charm-pink: rgb(218, 109, 151);
+$light-san-juan-blue: rgb(108, 130, 148);
+//---------------font sizes-----------
+$h1-big: 72px;
+$h1-small: 56px;
+$h2-size: 48px;
+$h3-big: 32px;
+$h3-small: 20px;
+$h4-size: 25px;
+//--------------font families-----------
+$DM-serif: 'DM Serif Display',
+serif;
+$public-sans: 'Public Sans',
+sans-serif;
+//--------------font weights-------------
+$regular: 400;
+$light: 300;
+
+.contact-section{
+    @media screen and (min-width: 1080px) {
+        padding: 5% 10%;
+    }
+    padding: 5% 7%;
+    .form{
+        @media screen and (min-width: 480px) {
+            width: 50%;
+          }
+          width: 100%;
+
+        .form-col{
+            input{
+                height: 50px;
+                width: 80%;
+                font-size: 15px;
+                padding-left: 20px;
+                margin-bottom: 20px;
+                border:none;
+                border-bottom: 1px solid $light-san-juan-blue;
+                color: $light-san-juan-blue;
+                font-family: $public-sans;
+                &.checkbox{
+                    height: 30px !important;
+                    width: 50px !important;
+                    background-color: $light-san-juan-blue;
+                }
+
+            }
+            textarea{
+                height: 150px;
+                width: 80%;
+                font-size: 15px;
+                font-family: $public-sans;
+                padding-left: 20px;
+                border:none;
+                border-bottom: 1px solid $light-san-juan-blue;
+                color: $light-san-juan-blue;
+                margin-bottom: 30px;
+            }
+            .checkbox-row{
+               
+                text-align: start;
+            align-items: center !important;
+             
+            
+                label{
+                    font-size: 18px;
+                    color:$san-juan-blue !important;
+                    font-size: $public-sans !important;
+                }
+                margin-bottom: 80px !important;
+            }
+            .submit-btn{
+                height: 50px;
+                width:150px;
+                color:$san-juan-blue;
+                border: 1px solid $san-juan-blue;
+                border-radius: 25px;
+                &:hover{
+                    transition:all 0.3s ease;
+                    cursor: pointer;
+                    color:$link-water-white;
+                    border: 1px solid $san-juan-blue;
+                    background-color: $san-juan-blue;
+                }
+            }
+        }
+    }
+    .contact-comp-cont{
+        @media screen and (min-width: 480px) {
+            width: 50%;
+          }
+          width: 100%;
+          h3{
+            font-size: $h3-small;
+            font-family: $public-sans;
+            font-weight: $light;
+            color: $san-juan-blue;
+            margin-bottom: 15px;
+          }
+          .contact-comp-row{
+          .company-col  {@media screen and (min-width: 800px) {
+                width: 33%;
+              }
+              width: 50%;
+              .logo {
+                margin: 20px auto 10px !important;
+              
+                &:hover {
+                    cursor: pointer;
+                    transform: scale(1.05) !important;
+                }
+            }}
+          }
+    }
+}
