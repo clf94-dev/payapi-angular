@@ -78,7 +78,17 @@ $light: 300;
             &::placeholder {
                 color: $light-san-juan-blue;
             }
-        }}
+            &:focus{
+                outline: none !important;
+            }
+        }
+        small{
+            width: 100% !important;
+            margin-right: 50%;
+            margin-bottom: 20px;
+            padding-left: 5px;
+        }
+    }
        .btn-col {
         @media screen and (min-width: 480px) {
             width: 50%;

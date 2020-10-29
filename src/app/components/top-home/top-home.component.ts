@@ -7,8 +7,19 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./top-home.component.scss']
 })
 export class TopHomeComponent implements OnInit {
-  phone='../../../assets/images/home/desktop/illustration-phone-mockup.svg'
-  constructor(private _route : ActivatedRoute, private _router : Router) { }
+  phone='../../../assets/images/home/desktop/illustration-phone-mockup.svg';
+  public user: any;
+  public submitClicked: boolean;
+
+  constructor(private _route : ActivatedRoute, private _router : Router) { 
+    this.submitClicked=false;
+    this.user={
+      name:"",
+      email: "",
+   
+    
+  }
+  }
 
   ngOnInit(): void {
   }
@@ -17,5 +28,8 @@ export class TopHomeComponent implements OnInit {
         ._router
         .navigate(['/contact']);
 }
-
+onSubmit(){
+  this.submitClicked=true;
+  console.log(this.user)
+}
 }

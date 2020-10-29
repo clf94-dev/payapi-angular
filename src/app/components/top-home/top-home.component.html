@@ -3,15 +3,19 @@
         <h1>Start building with our APIs for absolutely free.
         </h1>
 
-
+<form #userform="ngForm" (ngSubmit)="onSubmit()">
         <div fxLayout="row wrap">
             <div fxFlex.xs="100%" fxFlex.sm="50%" fxFlex.md="50%" fxFlex.lg="50%" class="input-col">
-                <input type="text" name="email" id="" placeholder="Your email address...">
+                <input required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" #email="ngModel" [(ngModel)]="user.email" [ngStyle]="{borderBottomColor: !email.valid && email.touched || submitClicked && email.untouched? 'red': 'black'}" type="email" name="email" name="email" placeholder="Enter email address">
+                <small *ngIf="!email.valid && email.touched || submitClicked && email.untouched"  style="color: 'red'">
+                    Email address not valid
+                  </small>
             </div>
-            <div fxFlex.xs="100%" fxFlex.sm="50%" fxFlex.md="50%" fxFlex.lg="50%" class="btn-col"> <button class='pink-btn'>Schedule a Demo</button></div>
+            <div fxFlex.xs="100%" fxFlex.sm="50%" fxFlex.md="50%" fxFlex.lg="50%" class="btn-col"> <button type="submit" class='pink-btn'>Schedule a Demo</button></div>
 
         </div>
         <p>Have any questions? <a (click)="goToContact()">Contact Us</a> </p>
+    </form>
 
     </div>
     <div class="img-col" fxFlex.xs="100%" fxFlex.sm="50% "fxFlex.md="50%" fxFlex.lg="50%">
