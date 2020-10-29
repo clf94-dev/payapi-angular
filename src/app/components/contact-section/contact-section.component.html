@@ -6,27 +6,38 @@
     fxFlex.md="50%"
     fxFlex.lg="50%"
   >
-    <form class="form-col" fxLayout="column">
-      <input type="text" name="name" placeholder="Name" />
-
-      <input type="email" name="email" id="" placeholder="Email Address" />
+    <form class="form-col" fxLayout="column" #userform="ngForm" [ngSubmit]="onSubmit()">
+      <input required pattern="[a-zA-Z]+"#name="ngModel" [(ngModel)]="user.name" [ngStyle]="{borderBottomColor: !name.valid && name.touched? 'red': 'black'}"  type="text" name="name" placeholder="Name" />
+      <small *ngIf="!name.valid && name.touched" style="color: 'red'">
+        Name not valid
+      </small>
+      <input required #email="ngModel" [(ngModel)]="user.email" [ngStyle]="{borderBottomColor: !email.valid && email.touched? 'red': 'black'}" type="email" name="email" id="" placeholder="Email Address" />
+      <small *ngIf="!email.valid && email.touched" style="color: 'red'">
+        Email address not valid
+      </small>
       <input type="text" name="" id="" placeholder="Company Name" />
       <input type="text" placeholder="Title" />
       <textarea
-        name=""
+      #message="ngModel" [(ngModel)]="user.message"
+      required
+        name="message"
         id=""
         cols="30"
         rows="10"
         placeholder="Message"
+        [ngStyle]="{borderBottomColor: !message.valid && message.touched? 'red': 'black'}"
       ></textarea>
-      <div class="checkbok-row" fxLayout="row">
-        <input type="checkbox" name="checkbox" id="" class="checkbox" />
+      <small *ngIf="!message.valid && message.touched" style="color: 'red'">
+        Message can't be empty
+      </small>
+      <div   class="checkbok-row" fxLayout="row">
+        <input  type="checkbox" name="checkbox" id="" class="checkbox" />
         <label for="checkbox"
           >Stay up-to-date with company announcements and updates to our
           API</label
         >
       </div>
-      <Button type="submit" class="submit-btn"> Submit </Button>
+      <button type="submit" class="submit-btn"> Submit </button>
     </form>
   </div>
   <div

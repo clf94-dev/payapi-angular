@@ -8,6 +8,7 @@ import { LogosInfo } from './logosInfo';
 })
 export class ContactSectionComponent implements OnInit {
   public logos: LogosInfo[];
+  public user: any;
   constructor() {
     this.logos =[
       new LogosInfo("../../../assets/images/shared/desktop/google.svg", "Google"),
@@ -17,10 +18,21 @@ export class ContactSectionComponent implements OnInit {
       new LogosInfo("../../../assets/images/shared/desktop/oracle.svg", "Oracle"),
       new LogosInfo("../../../assets/images/shared/desktop/nvidia.svg", "NVidia")
 
-    ]
+    ];
+this.user={
+  name:"",
+  email: "",
+  company: "",
+  title: "",
+  message: ""
+}
    }
 
   ngOnInit(): void {
   }
 
+  onSubmit(){
+    
+    console.log(this.user)
+  }
 }
