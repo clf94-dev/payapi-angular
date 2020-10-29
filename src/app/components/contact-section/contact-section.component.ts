@@ -9,6 +9,7 @@ import { LogosInfo } from './logosInfo';
 export class ContactSectionComponent implements OnInit {
   public logos: LogosInfo[];
   public user: any;
+  public submitClicked: boolean;
   constructor() {
     this.logos =[
       new LogosInfo("../../../assets/images/shared/desktop/google.svg", "Google"),
@@ -19,6 +20,7 @@ export class ContactSectionComponent implements OnInit {
       new LogosInfo("../../../assets/images/shared/desktop/nvidia.svg", "NVidia")
 
     ];
+    this.submitClicked=false;
 this.user={
   name:"",
   email: "",
@@ -32,7 +34,7 @@ this.user={
   }
 
   onSubmit(){
-    
+    this.submitClicked=true;
     console.log(this.user)
   }
 }

@@ -6,13 +6,13 @@
     fxFlex.md="50%"
     fxFlex.lg="50%"
   >
-    <form class="form-col" fxLayout="column" #userform="ngForm" [ngSubmit]="onSubmit()">
+    <form class="form-col" fxLayout="column" #userform="ngForm" (ngSubmit)="onSubmit()">
       <input required pattern="[a-zA-Z]+"#name="ngModel" [(ngModel)]="user.name" [ngStyle]="{borderBottomColor: !name.valid && name.touched? 'red': 'black'}"  type="text" name="name" placeholder="Name" />
-      <small *ngIf="!name.valid && name.touched" style="color: 'red'">
+      <small *ngIf="!name.valid && name.touched || submitClicked && name.untouched" style="color: 'red'">
         Name not valid
       </small>
       <input required #email="ngModel" [(ngModel)]="user.email" [ngStyle]="{borderBottomColor: !email.valid && email.touched? 'red': 'black'}" type="email" name="email" id="" placeholder="Email Address" />
-      <small *ngIf="!email.valid && email.touched" style="color: 'red'">
+      <small *ngIf="!email.valid && email.touched || submitClicked && email.untouched"  style="color: 'red'">
         Email address not valid
       </small>
       <input type="text" name="" id="" placeholder="Company Name" />
@@ -27,7 +27,7 @@
         placeholder="Message"
         [ngStyle]="{borderBottomColor: !message.valid && message.touched? 'red': 'black'}"
       ></textarea>
-      <small *ngIf="!message.valid && message.touched" style="color: 'red'">
+      <small *ngIf="!message.valid && message.touched|| submitClicked && message.untouched" style="color: 'red'">
         Message can't be empty
       </small>
       <div   class="checkbok-row" fxLayout="row">
