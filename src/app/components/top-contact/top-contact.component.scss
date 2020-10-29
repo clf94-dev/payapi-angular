@@ -22,18 +22,18 @@ $light: 300;
 //---------------------TopContact component -------------
 .top-contact-cont {
     @media screen and (min-width: 1080px) {
-        padding: 5% 10%;
+        padding: 5% 10% 0%;
     }
-    padding: 5% 7%;
+    padding: 5% 7% 0%;
     h1 {
         font-size: $h1-small;
         font-family: $public-sans;
         font-weight: $light;
         color: $mirage-blue;
-        @media screen and (min-width: 1080px) {
-            padding-right: 25%;
+        @media screen and (min-width: 800px) {
+            padding-right: 35% !important;
         }
-        @media screen and (max-width: 1080px) {
+        @media screen and (max-width: 800px) {
             text-align: center;
             font-size: 35px;
         }
