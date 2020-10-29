@@ -11,7 +11,7 @@
       <small *ngIf="!name.valid && name.touched || submitClicked && name.untouched" style="color: 'red'">
         Name not valid
       </small>
-      <input required #email="ngModel" [(ngModel)]="user.email" [ngStyle]="{borderBottomColor: !email.valid && email.touched? 'red': 'black'}" type="email" name="email" id="" placeholder="Email Address" />
+      <input required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" #email="ngModel" [(ngModel)]="user.email" [ngStyle]="{borderBottomColor: !email.valid && email.touched? 'red': 'black'}" type="email" name="email" id="" placeholder="Email Address" />
       <small *ngIf="!email.valid && email.touched || submitClicked && email.untouched"  style="color: 'red'">
         Email address not valid
       </small>

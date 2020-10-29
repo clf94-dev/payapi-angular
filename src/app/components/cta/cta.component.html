@@ -1,16 +1,21 @@
 <div class="cta-section" fxLayout="row wrap">
     <div class="title-col" fxFlex.xs='100%' fxFlex.sm='100%' fxFlex.md="50%" fxFlex.lg="50%">
-        <h2>Ready to get started?</h2>
+        <h2>Ready to start?</h2>
     </div>
     <div class="input-row" fxFlex.xs='100%' fxFlex.sm='100%' fxFlex.md="50%" fxFlex.lg="50%">
+    <form #userform="ngForm" (ngSubmit)="onSubmit()">
         <div fxLayout="row wrap">
             <div class="input-col" fxFlex.xs="100%" fxFlex.sm="60%" fxFlex.md="60%" fxFlex.lg="60%">
-                <input type="text" name="email" placeholder="Your email address...">
+                <input required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" #email="ngModel" [(ngModel)]="user.email" [ngStyle]="{borderBottomColor: !email.valid && email.touched || submitClicked && email.untouched? 'red': 'black'}" type="email" name="email" name="email" placeholder="Enter email address">
+                <small *ngIf="!email.valid && email.touched || submitClicked && email.untouched"  style="color: 'red'">
+                    Email address not valid
+                  </small>
             </div>
             <div class="btn-col" fxFlex.xs="100% "fxFlex.sm="40% "fxFlex.md="40%" fxFlex.lg="40%">
 
-                <button class='pink-btn'>Contact Us</button>
+                <button type="submit" class='pink-btn'>Schedule a Demo</button>
             </div>
         </div>
+    </form>
     </div>
 </div>

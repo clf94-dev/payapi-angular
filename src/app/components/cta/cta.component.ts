@@ -6,10 +6,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cta.component.scss']
 })
 export class CtaComponent implements OnInit {
-
-  constructor() { }
+  public user: any;
+  public submitClicked: boolean;
+  constructor() { 
+    this.submitClicked=false;
+    this.user={
+      name:"",
+      email: "",
+   
+    }
+  }
 
   ngOnInit(): void {
   }
-
+  onSubmit(){
+    this.submitClicked=true;
+    console.log(this.user)
+  }
 }

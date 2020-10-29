@@ -33,6 +33,7 @@ $light: 300;
 
         .form-col{
             input{
+                
                 height: 50px;
                 width: 80%;
                 padding-bottom: 10px;
@@ -48,6 +49,9 @@ $light: 300;
                     width: 50px !important;
                     background-color: $light-san-juan-blue;
                 }
+                &:focus{
+                    outline: none !important;
+                }
 
             }
             textarea{
@@ -60,6 +64,9 @@ $light: 300;
                 border-bottom: 1px solid $light-san-juan-blue;
                 color: $light-san-juan-blue;
                 margin-bottom: 30px;
+                &:focus{
+                    outline: none !important;
+                }
             }
             small{
                 width: 100% !important;
