@@ -59,12 +59,15 @@ $light: 300;
                 z-index: 2;
                 cursor: pointer;
             }
-            .fa-bars,
-            .fa-times {
+            .fa-times,
+            .fa-bars {
                 color: $mirage-blue;
             }
-            .fa-times {
-                color: $link-water-white;
+            @media screen and (max-width: 600px) {
+                .fa-times {
+                    color: $link-water-white !important;
+                    z-index: 3;
+                }
             }
         }
         .nav-menu {
@@ -88,7 +91,7 @@ $light: 300;
                 transition: all 0.5s ease;
                 &.active {
                     background-color: $mirage-blue;
-                    left: 2%;
+                    left: -5%;
                     opacity: 1;
                     transition: all 0.5s ease;
                     z-index: 1;

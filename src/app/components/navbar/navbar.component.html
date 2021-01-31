@@ -1,20 +1,19 @@
 <nav class='navbar'>
     <div class="navbar-cont">
-        <div class='navbar-logo'>
+        <div class='navbar-logo' (click)="closeMobile()">
             <img src="{{logo}}" alt="myteam" (click)='goToHome()' />
         </div>
-        <div class="menu-icon">
-            <i class='fas fa-bars'></i>
+        <div class="menu-icon" (click)="handleClick()">
+            <i [class]="click? 'fas  fa-times':'fas fa-bars'"></i>
         </div>
-        <ul class='nav-menu'>
-            <li class="nav-item">
+        <ul [class]="click?'nav-menu active' :'nav-menu'">
+            <li class="nav-item" (click)='closeMobile()'>
                 <a class="nav-links" [routerLink]="['/pricing']" [routerLinkActive]="['active']"> Pricing</a>
-
             </li>
-            <li class="nav-item">
+            <li class="nav-item" (click)='closeMobile()'>
                 <a class="nav-links" [routerLink]="['/about']" [routerLinkActive]="['active']"> About</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item" (click)='closeMobile()'>
                 <a class="nav-links" [routerLink]="['/contact']" [routerLinkActive]="['active']"> Contact</a>
             </li>
             <button class='pink-btn' (click)='goToContact()'>  Schedule a Demo</button>
